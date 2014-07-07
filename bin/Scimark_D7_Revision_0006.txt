@@ -1,0 +1,17 @@
+Note: Removed two local vars in FFT.pas --> gives about 180MFops
+
+
+C:\Projects\scimark\bin>Scimark_D7_Revision_0006.exe
+**                                                               **
+** SciMark2a Numeric Benchmark, see http://math.nist.gov/scimark **
+**                                                               **
+** Delphi Port, see http://svn.code.sf.net/p/scimarkfordelphi/code/     **
+**                                                               **
+Compiled with Delphi 7
+Mininum running time = 2.00 seconds
+Composite Score MFlops:   565.14
+FFT             Mflops:   447.70    (N=1024)
+SOR             Mflops:   825.96    (100 x 100)
+MonteCarlo:     Mflops:   132.04
+Sparse matmult  Mflops:   387.21    (N=1000, nz=5000)
+LU              Mflops:  1032.78    (M=100, N=100)
