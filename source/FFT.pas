@@ -31,7 +31,7 @@ begin
   if (n <> (1 shl result)) then
   begin
     writeln('FFT: Data length is not a power of 2!: ', n);
-    exit(1);
+    {$ifdef VER150}exit;{$else}exit(1);{$endif}
   end;
 end;
 

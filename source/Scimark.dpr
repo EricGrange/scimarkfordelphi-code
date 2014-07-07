@@ -1,6 +1,8 @@
 program Scimark;
 {$APPTYPE CONSOLE}
-{$FINITEFLOAT OFF}
+{$ifndef VER150}
+  {$FINITEFLOAT OFF}  // need to find out when this was introduced. With D7 it does not compile.
+{$endif}
 
 uses
   SysUtils,
@@ -65,8 +67,11 @@ begin
     Writeln('**                                                               **');
     Writeln('** SciMark2a Numeric Benchmark, see http://math.nist.gov/scimark **');
     Writeln('**                                                               **');
-    Writeln('** Delphi Port, see http://code.google.com/p/scimark-delphi/     **');
+    Writeln('** Delphi Port, see http://svn.code.sf.net/p/scimarkfordelphi/code/     **');
     Writeln('**                                                               **');
+    {$ifdef VER150}
+    Writeln('Compiled with Delphi 7');
+    {$endif}
     Writeln(Format('Mininum running time = %.2f seconds', [min_time]));
     R := new_Random_seed(RANDOM_SEED);
     res[1] := kernel_measureFFT(FFT_N, min_time, R);

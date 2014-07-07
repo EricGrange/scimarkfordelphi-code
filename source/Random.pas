@@ -156,7 +156,7 @@ Begin
   GetMem(Result, sizeof(PDoubleArray) * m);
 
   if (Result = nil) then
-    exit(nil);
+    {$ifdef VER150}exit;{$else}exit(nil);{$endif}
 
   for i := 0 to m - 1 do
   begin
@@ -165,7 +165,7 @@ Begin
     if Result[i] = nil then
     begin
       FreeMem(Result);
-      exit(nil);
+      {$ifdef VER150}exit;{$else}exit(nil);{$endif}
     end;
 
     for j := 0 to N - 1 do

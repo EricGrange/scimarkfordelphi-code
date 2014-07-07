@@ -33,7 +33,7 @@ Begin
   GetMem(Result, sizeof(pointer) * M);
 
   if (Result = nil) then
-    exit(nil);
+    {$ifdef VER150}exit;{$else}exit(nil);{$endif}
 
   for i := 0 to M - 1 do
   begin
@@ -61,7 +61,7 @@ Begin
     end;
 
     FreeMem(Result);
-    exit(nil);
+    {$ifdef VER150}exit;{$else}exit(nil);{$endif}
   end;
 End;
 

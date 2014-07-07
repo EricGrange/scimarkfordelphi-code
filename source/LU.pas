@@ -59,7 +59,7 @@ begin
     { of column j, below the diagonal }
 
     if (A[jp][j] = 0) then
-      exit(1); { factorization failed because of zero pivot }
+      {$ifdef VER150}exit;{$else}exit(1);{$endif} { factorization failed because of zero pivot }
 
     if (jp <> j) then
     begin

@@ -200,13 +200,13 @@ begin
   cycles:=1;
 
   A := RandomMatrix(N, N,  R);
-  if (A = nil) then exit(1);
+  if (A = nil) then {$ifdef VER150}exit;{$else}exit(1);{$endif}
 
   lu := new_Array2D_double(N, N);
-  if (lu = nil) then exit(1);
+  if (lu = nil) then {$ifdef VER150}exit;{$else}exit(1);{$endif};
 
   GetMem(pivot, N * sizeof(integer));
-  if (pivot = nil) then exit(1);
+  if (pivot = nil) then {$ifdef VER150}exit;{$else}exit(1);{$endif}
 
   while true do
   begin
