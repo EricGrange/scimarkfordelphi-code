@@ -88,12 +88,10 @@ begin
     for a := 1 to dual-1 do
     begin
       { trignometric recurrence for w-> exp(i theta) w }
-      begin
-        tmp_real := w_real - s * w_imag - s2 * w_real;
-        tmp_imag := w_imag + s * w_real - s2 * w_imag;
-        w_real := tmp_real;
-        w_imag := tmp_imag;
-      end;
+      tmp_real := w_real - s * w_imag - s2 * w_real;
+      tmp_imag := w_imag + s * w_real - s2 * w_imag;
+      w_real := tmp_real;
+      w_imag := tmp_imag;
 
       b:=0;
       while b < n do
