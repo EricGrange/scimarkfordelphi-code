@@ -1,0 +1,19 @@
+Note: As cloned from https://code.google.com/p/scimark-delphi/.
+No optimizations done yet.
+
+
+C:\Projects\scimark\bin>Scimark_D7_Revision_0003.exe
+**                                                               **
+** SciMark2a Numeric Benchmark, see http://math.nist.gov/scimark **
+**                                                               **
+** Delphi Port, see http://svn.code.sf.net/p/scimarkfordelphi/code/     **
+**                                                               **
+Compiled with Delphi 7
+Mininum running time = 2.00 seconds
+Composite Score MFlops:   528.60
+FFT             Mflops:   280.97    (N=1024)
+SOR             Mflops:   822.08    (100 x 100)
+MonteCarlo:     Mflops:   128.87
+Sparse matmult  Mflops:   386.07    (N=1000, nz=5000)
+LU              Mflops:  1025.03    (M=100, N=100)
+
