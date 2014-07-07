@@ -38,8 +38,7 @@ end;
 procedure FFT_transform_internal(_N: Integer; data: PDoubleArray; direction: Integer);
 var
   n, bit, logn, dual, a, b, i, j: Integer;
-  w_real, w_imag, theta, s, t, s2, wd_real, wd_imag, tmp_real, tmp_imag,
-  z1_real, z1_imag: double;
+  w_real, w_imag, theta, s, t, s2, wd_real, wd_imag, tmp_real, tmp_imag:double;
 
 begin
   n := _N div 2;
@@ -99,11 +98,8 @@ begin
         i := 2*(b + a);
         j := 2*(b + a + dual);
 
-        z1_real := data[j];
-        z1_imag := data[j+1];
-
-        wd_real := w_real * z1_real - w_imag * z1_imag;
-        wd_imag := w_real * z1_imag + w_imag * z1_real;
+        wd_real := w_real * data[j] - w_imag * data[j+1];
+        wd_imag := w_real * data[j+1] + w_imag * data[j];
 
         data[j]   := data[i]   - wd_real;
         data[j+1] := data[i+1] - wd_imag;
