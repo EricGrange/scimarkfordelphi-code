@@ -24,16 +24,13 @@ procedure SparseCompRow_matmult(M: integer; y: PDoubleArray; val: PDoubleArray;
 var
   reps, r, i: integer;
   sum: double;
-  rowR, rowRp1: integer;
 begin
   for reps := 0 to NUM_ITERATIONS - 1 do
   begin
     for r := 0 to M - 1 do
     begin
       sum := 0.0;
-      rowR := row[r];
-      rowRp1 := row[r + 1];
-      for i := rowR to rowRp1 - 1 do
+      for i := row[r] to row[r + 1] - 1 do
         sum := sum + x[col[i]] * val[i];
 
       y[r] := sum;
