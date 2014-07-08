@@ -27,7 +27,6 @@ Var
   failed: boolean;
 
 Begin
-  i := 0;
   failed := false;
 
   GetMem(Result, sizeof(pointer) * M);

@@ -35,7 +35,6 @@ Var
 
 begin
   minMN := IFTHEN(M < N, M, N);
-  j := 0;
 
   for j := 0 to minMN - 1 do
   begin
