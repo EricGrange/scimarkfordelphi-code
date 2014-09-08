@@ -70,7 +70,10 @@ begin
     Writeln('** Delphi Port, see http://svn.code.sf.net/p/scimarkfordelphi/code/     **');
     Writeln('**                                                               **');
     {$ifdef VER150}
-    Writeln('Compiled with Delphi 7');
+    Writeln('Compiled with Delphi 7 32-Bit');
+    {$endif}
+    {$ifdef VER280}
+    Writeln('Compiled with Delphi XE7 32-Bit');
     {$endif}
     Writeln(Format('Mininum running time = %.2f seconds', [min_time]));
     R := new_Random_seed(RANDOM_SEED);
