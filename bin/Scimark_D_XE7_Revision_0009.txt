@@ -1,0 +1,13 @@
+**                                                               **
+** SciMark2a Numeric Benchmark, see http://math.nist.gov/scimark **
+**                                                               **
+** Delphi Port, see http://svn.code.sf.net/p/scimarkfordelphi/code/     **
+**                                                               **
+Compiled with Delphi XE7 32-Bit
+Mininum running time = 2.00 seconds
+Composite Score MFlops:   631.49
+FFT             Mflops:   433.24    (N=1024)
+SOR             Mflops:   844.05    (100 x 100)
+MonteCarlo:     Mflops:   133.35
+Sparse matmult  Mflops:   372.89    (N=1000, nz=5000)
+LU              Mflops:  1373.92    (M=100, N=100)
