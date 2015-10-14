@@ -75,12 +75,25 @@ begin
     {$ifdef VER210}
     Writeln('Compiled with Delphi 2010 32-Bit');
     {$endif}
+
+    {$ifdef WIN32}
     {$ifdef VER280}
     Writeln('Compiled with Delphi XE7 32-Bit');
     {$endif}
     {$ifdef VER300}
     Writeln('Compiled with Delphi XE10 Seattle 32-Bit');
     {$endif}
+    {$endif}
+    {$ifdef WIN64}
+    {$ifdef VER280}
+    Writeln('Compiled with Delphi XE7 64-Bit');
+    {$endif}
+    {$ifdef VER300}
+    Writeln('Compiled with Delphi XE10 Seattle 64-Bit');
+    {$endif}
+    {$endif}
+
+
     Writeln(Format('Mininum running time = %.2f seconds', [min_time]));
     R := new_Random_seed(RANDOM_SEED);
     res[1] := kernel_measureFFT(FFT_N, min_time, R);
