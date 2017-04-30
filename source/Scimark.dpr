@@ -91,6 +91,9 @@ begin
     {$ifdef VER300}
     Writeln('Compiled with Delphi XE10 Seattle 64-Bit');
     {$endif}
+    {$ifdef VER310}
+    Writeln('Compiled with Delphi XE10.1 Berlin 32-Bit');
+    {$endif}
     {$endif}
 
 
