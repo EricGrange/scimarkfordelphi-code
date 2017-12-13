@@ -80,13 +80,13 @@ begin
       if CompilerVersion=28 then Writeln('Compiled with Delphi XE7 32-Bit');
       if CompilerVersion=30 then Writeln('Compiled with Delphi XE10 Seattle 32-Bit');
       if CompilerVersion=31 then Writeln('Compiled with Delphi XE10.1 Berlin 32-Bit');
-      if CompilerVersion=32 then Writeln('Compiled with Delphi XE10.2 Tokyo 32-Bit');
+      if CompilerVersion=32 then Writeln('Compiled with Delphi XE10.2.2 Tokyo 32-Bit');
     {$endif}
     {$ifdef WIN64}
       if CompilerVersion=28 then Writeln('Compiled with Delphi XE7 64-Bit');
       if CompilerVersion=30 then Writeln('Compiled with Delphi XE10 Seattle 64-Bit');
       if CompilerVersion=31 then Writeln('Compiled with Delphi XE10.1 Berlin 64-Bit');
-      if CompilerVersion=32 then Writeln('Compiled with Delphi XE10.2 Tokyo 64-Bit');
+      if CompilerVersion=32 then Writeln('Compiled with Delphi XE10.2.2 Tokyo 64-Bit');
     {$endif}
 
     Writeln(Format('Mininum running time = %.2f seconds', [min_time]));
