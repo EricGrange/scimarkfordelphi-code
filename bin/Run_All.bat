@@ -1,6 +1,8 @@
 md .\win32
 md .\win64
+scimark_D_XE10_3_Rio_win64.exe > .\win64\scimark_D_XE10_3_Rio_win64.txt
 scimark_D_XE10_3_Rio_win32.exe > .\win32\scimark_D_XE10_3_Rio_win32.txt
+Scimark_D_XE10_2_3_Tokyo_win64.exe > .\win64\Scimark_D_XE10_2_3_Tokyo_win64.txt
 Scimark_D_XE10_2_3_Tokyo_win32.exe > .\win32\Scimark_D_XE10_2_3_Tokyo_win32.txt
 Scimark_D_XE10_2_2_Tokyo_win64.exe > .\win64\Scimark_D_XE10_2_2_Tokyo_win64.txt
 Scimark_D_XE10_2_2_Tokyo_win32.exe > .\win32\Scimark_D_XE10_2_2_Tokyo_win32.txt
