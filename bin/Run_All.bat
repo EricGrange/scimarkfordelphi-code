@@ -21,4 +21,5 @@ scimark_codetyphon_59_fpc_311_win32_Optimization_O3_Revision_10.exe > .\win32\sc
 scimark_codetyphon_59_fpc_311_win32_Optimization_O4_Revision_10.exe > .\win32\scimark_codetyphon_59_fpc_311_win32_Optimization_O4_Revision_10.txt
 scimark_codetyphon_59_fpc_311_win32_Optimization_O1_Revision_10.exe > .\win32\scimark_codetyphon_59_fpc_311_win32_Optimization_O1_Revision_10.txt
 scimark_D_XE10_1_Berlin_Update2_win32.exe > .\win32\scimark_D_XE10_1_Berlin_Update2_win32.txt
+Scimark_2.0.0RC2_r59373_FPC_3.0.4_win32_Optimization_O1.exe >.\win32\Scimark_2.0.0RC2_r59373_FPC_3.0.4_win32_Optimization_O1.txt
 pause
