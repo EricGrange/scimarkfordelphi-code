@@ -1,7 +1,7 @@
 md .\win32
 md .\win64
-scimark_D_XE10_3_3_Rio_win64.exe > .\win64\scimark_D_XE10_3_2_Rio_win64.txt
-scimark_D_XE10_3_3_Rio_win32.exe > .\win32\scimark_D_XE10_3_2_Rio_win32.txt
+scimark_D_XE10_3_3_Rio_win64.exe > .\win64\scimark_D_XE10_3_3_Rio_win64.txt
+scimark_D_XE10_3_3_Rio_win32.exe > .\win32\scimark_D_XE10_3_3_Rio_win32.txt
 scimark_D_XE10_3_2_Rio_win64.exe > .\win64\scimark_D_XE10_3_2_Rio_win64.txt
 scimark_D_XE10_3_2_Rio_win32.exe > .\win32\scimark_D_XE10_3_2_Rio_win32.txt
 scimark_D_XE10_3_Rio_win64.exe > .\win64\scimark_D_XE10_3_Rio_win64.txt
