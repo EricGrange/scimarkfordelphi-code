@@ -3,7 +3,7 @@ unit Stopwatch;
 interface
 
 uses
-  WinProcs;
+  SysUtils;
 
 Type
   Stopwatch_struct = record
@@ -16,7 +16,7 @@ Type
 
 
 
-  function seconds(): double;
+  function seconds: double;
 
   procedure Stopwtach_reset(Q: PStopwatch);
   function new_Stopwatch(): PStopwatch;
@@ -28,9 +28,12 @@ Type
 
 implementation
 
+uses
+  Windows;
+
 function seconds: double;
 begin
-  Result := GetTickCount / 1000.0;
+  Result := GetTickCount64 / 1000.0;
 end;
 
 procedure Stopwtach_reset(Q: PStopwatch);
@@ -60,7 +63,7 @@ begin
   begin
       Q^.running := true;
       Q^.total := 0.0;
-      Q^.last_time := seconds();
+      Q^.last_time := seconds;
   end;
 end;
 
@@ -68,7 +71,7 @@ procedure Stopwatch_resume(Q: PStopwatch);
 begin
     if (not (Q^.running)) then
     begin
-        Q^.last_time := seconds();
+        Q^.last_time := seconds;
         Q^.running := true;
     end;
 end;
@@ -77,7 +80,7 @@ procedure Stopwatch_stop(Q: PStopwatch);
 begin
     if (Q^.running) then
     begin
-        Q^.total := Q^.total + seconds() - Q^.last_time;
+        Q^.total := Q^.total + seconds - Q^.last_time;
         Q^.running := false;
     end;
 end;
@@ -88,7 +91,7 @@ var
 begin
     if (Q^.running) then
     begin
-        t := seconds();
+        t := seconds;
         Q^.total := Q^.total + t - Q^.last_time;
         Q^.last_time := t;
     end;
