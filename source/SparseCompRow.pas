@@ -13,7 +13,7 @@ implementation
 
 function SparseCompRow_num_flops(N, nz, num_iterations: integer): double;
 var
-  actual_nz: integer;
+  actual_nz: double;
 begin
   actual_nz := (nz div N) * N;
   result := actual_nz * 2 * num_iterations;
